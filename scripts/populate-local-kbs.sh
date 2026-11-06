@@ -67,13 +67,13 @@ EOF
 
 $KBC --url $URL  config \
 	--auth-private-key $KEY  \
-	set-sample-reference-value tpm_pcr4 "ff2b357be4a4bc66be796d4e7b2f1f27077dc89b96220aae60b443bcf4672525"
+	set-sample-reference-value tpm_pcr4 "a396afc7b063562ec1f12225dd191bc80235b6566ae1966657d91cfa4e4e54bd"
 $KBC --url $URL  config \
 	--auth-private-key $KEY  \
-	set-sample-reference-value tpm_pcr7 "b3a56a06c03a65277d0a787fcabc1e293eaa5d6dd79398f2dda741f7b874c65d"
+	set-sample-reference-value tpm_pcr7 "e21b703ee69c77476bccb43ec0336a9a1b2914b378944f7b00a10214ca8fea93"
 $KBC --url $URL  config \
 	--auth-private-key $KEY  \
-	set-sample-reference-value tpm_pcr14 "17cdefd9548f4383b67a37a901673bf3c8ded6f619d36c8007562de1d93c81cc"
+	set-sample-reference-value tpm_pcr14 "0000000000000000000000000000000000000000000000000000000000000000"
 
 $KBC --url $URL  config \
 	--auth-private-key $KEY  \

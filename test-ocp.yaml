@@ -1,0 +1,15 @@
+cluster: test
+image: centos-stream-coreos-10.0.20260526-0-qemu.x86_64.qcow2
+domain: confidential-cluster.org
+version: stable
+tag: '4.22'
+ctlplanes: 1
+workers: 0
+memory: 20480
+numcpus: 12
+okd: true
+worker_memory: 8192
+autologin: true
+vmrules:
+- test:
+    tpm: true

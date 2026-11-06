@@ -1,0 +1,37 @@
+{
+  "ignition": {
+    "version": "3.6.0"
+  },
+  "storage": {
+    "filesystems": [
+      {
+        "device": "/dev/mapper/root",
+        "format": "ext4",
+        "label": "root",
+        "options": [
+          "-O",
+          "verity"
+        ],
+        "uuid": "910678ff-f77e-4a7d-8d53-86f2ac47a823",
+        "wipeFilesystem": true
+      }
+    ],
+    "luks": [
+      {
+	"clevis": {
+          "custom": {
+            "config": "{\n  \"servers\":[{\"url\":\"http://192.168.122.1:8080\",\"cert\":\"\"}],\n  \"path\":\"default/machine/root\",\n  \"attestation_key\": {\n    \"registration\": {\n       \"url\": \"http://192.168.122.1:8001\",\n       \"uuid\": \"machine\",\n       \"cert\": \"\"\n    }\n  }\n}\n",
+            "needsNetwork": true,
+            "pin": "trustee"
+          }
+        },
+        "device": "/dev/disk/by-partlabel/root",
+        "label": "luks-root",
+        "name": "root",
+        "uuid": "8ec9cda3-6b77-45d7-bb56-a95cd9e83234",
+        "wipeVolume": true
+      }
+    ]
+  }
+}
+
